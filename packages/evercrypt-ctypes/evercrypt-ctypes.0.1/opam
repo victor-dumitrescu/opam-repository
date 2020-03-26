@@ -25,7 +25,7 @@ install: [
   make "install-evercrypt-ctypes"
 ]
 url {
-  src: "https://github.com/project-everest/hacl-star/archive/v0.2.1.tar.gz"
+  src: "https://github.com/victor-dumitrescu/hacl-star/archive/v0.2.1.tar.gz"
   checksum: [
     "md5=4d63939003453511c764f8dbcdad651b"
     "sha512=d060eb17d2de73021667d04b2ee5174662694bd2a10fc0e76f2796314c322720ca0c0d93f0921a89226f655e0423cda2c5a79fad0f6ca22a18d9d81fb0e45b02"
