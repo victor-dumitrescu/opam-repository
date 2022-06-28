@@ -1,0 +1,29 @@
+opam-version: "2.0"
+synopsis: "Polynomials over BLS12-381 finite field"
+maintainer: "privacy-team@nomadic-labs.com"
+authors: "Nomadic Labs Privacy Team"
+license: "MIT"
+homepage: "git+https://gitlab.com/nomadic-labs/privacy-team.git"
+bug-reports: "https://gitlab.com/nomadic-labs/privacy-team/issues"
+depends: [
+  "ocaml" {>= "4.12.0"}
+  "dune" {>= "2.8"}
+  "bls12-381" {>= "4.0.0"}
+  "data-encoding"
+  "alcotest" {with-test & >= "1.1.0"}
+  "qcheck-alcotest" {with-test}
+  "bisect_ppx" {with-test}
+]
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "test" "-p" name "-j" jobs] {with-test}
+]
+dev-repo: "git+https://gitlab.com/nomadic-labs/privacy-team.git"
+url {
+  src:
+    "https://gitlab.com/nomadic-labs/privacy-team/-/archive/v0.1.1a/privacy-team-v0.1.1a.tar.gz"
+  checksum: [
+    "md5=fe0d867c9b6ba0a97d46245bfb4a297a"
+    "sha512=a93032b91bdfcfcff25d3c2f5a04c4052a2fc2a54718274c34dd6ff0045363187f0c2d5f19d8a7001fe8885aae44f49bf09e8880c3c2a96050284525710b575b"
+  ]
+}
